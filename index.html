@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ELMAS Robotic | Roboterprogrammierung &amp; SPS-Programmierung in Niedersachsen</title>
+<meta name="description" content="Spezialist für Roboterprogrammierung und Industrieautomation in Peine. KUKA-, FANUC- &amp; ABB-Programmierer, SPS-Programmierung (Siemens TIA Portal, S7), Inbetriebnahme, Retrofit &amp; Schulung. Industrieroboter programmieren lassen im Großraum Hannover, Wolfsburg &amp; Braunschweig.">
+<meta name="theme-color" content="#16181D">
+<link rel="canonical" href="https://elmas-robotic.com/">
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="ELMAS Robotic | Roboterprogrammierung &amp; SPS in Niedersachsen">
+<meta property="og:description" content="Roboterprogrammierung &amp; Industrieautomation aus Peine – KUKA, FANUC, ABB &amp; Siemens-SPS. Programmiert von einem Spezialisten, der selbst an der Anlage steht.">
+<meta property="og:url" content="https://elmas-robotic.com/">
+<meta property="og:image" content="https://elmas-robotic.com/assets/logo.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Poppins ist self-hosted (DSGVO) und wird in styles.css via @font-face geladen -->
+<link rel="stylesheet" href="styles.css">
+
+<!-- JSON-LD: LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "ELMAS Robotic",
+  "description": "Spezialist für Roboterprogrammierung und Industrieautomation – KUKA, FANUC, ABB & Siemens-SPS, Inbetriebnahme, Retrofit & Schulung.",
+  "url": "https://elmas-robotic.com/",
+  "telephone": "+49 176 30 52 94 14",
+  "email": "info@elmas-robotic.com",
+  "image": "https://elmas-robotic.com/assets/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Adlerstraße 7",
+    "postalCode": "31228",
+    "addressLocality": "Peine",
+    "addressRegion": "Niedersachsen",
+    "addressCountry": "DE"
+  },
+  "areaServed": ["Niedersachsen", "Hannover", "Wolfsburg", "Braunschweig", "Peine"],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "08:00",
+    "closes": "18:00"
+  },
+  "knowsAbout": ["Roboterprogrammierung", "SPS-Programmierung", "KUKA", "FANUC", "ABB", "Siemens TIA Portal", "Industrieautomation", "Retrofit"],
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "reviewCount": "4", "bestRating": "5"},
+  "review": [
+    {"@type": "Review", "author": {"@type": "Person", "name": "Mustafa Er"}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Sehr guter Roboter-Programmierer! Freundlich, zuverlässig und findet für jedes Problem eine passende Lösung. Arbeitet schnell und professionell – absolut empfehlenswert."},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Denni"}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Sehr guter Service und Beratung. Elmas Robotic glänzt durch Zuverlässigkeit und Flexibilität."},
+    {"@type": "Review", "author": {"@type": "Person", "name": "Pervin Kurt"}, "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}, "reviewBody": "Sehr gute kompetente Beratung."}
+  ]
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Was kostet die Programmierung eines Roboters oder einer SPS?","acceptedAnswer":{"@type":"Answer","text":"Die Kosten hängen stark von Aufgabe, System und Aufwand ab: Anzahl der Roboter, Komplexität der Bewegungen, Schnittstellen zur SPS und ob vor Ort oder per Offline-Programmierung gearbeitet wird. Nach einem kurzen Gespräch und einer Analyse Ihrer Anlage erhalten Sie ein klares, nachvollziehbares Angebot ohne versteckte Posten."}},
+    {"@type":"Question","name":"Wie lange dauert die Inbetriebnahme einer Anlage?","acceptedAnswer":{"@type":"Answer","text":"Das hängt vom Umfang ab. Eine einzelne, klar umrissene Roboterzelle ist oft in wenigen Tagen einsatzbereit, komplexe vernetzte Anlagen benötigen mehr Zeit. Wo sinnvoll, sichern wir die Inbetriebnahme vorab durch Simulation und virtuelle Inbetriebnahme ab."}},
+    {"@type":"Question","name":"Können bestehende Anlagen nachgerüstet oder optimiert werden?","acceptedAnswer":{"@type":"Answer","text":"Ja. Wir modernisieren vorhandene Roboter und Steuerungen (Retrofit), reduzieren Zykluszeiten und binden Anlagen in SPS- und MES-Systeme ein – Sie nutzen Ihre bestehende Technik weiter und steigern Produktivität und Verfügbarkeit."}},
+    {"@type":"Question","name":"Woran erkenne ich einen erfahrenen Roboterprogrammierer?","acceptedAnswer":{"@type":"Answer","text":"An nachweisbarer Praxis an realen Anlagen, Hersteller-übergreifendem Know-how (KUKA, FANUC, ABB) und der Fähigkeit, Roboter und SPS sauber zusammenzubringen. Bei ELMAS Robotic programmiert der Inhaber selbst."}},
+    {"@type":"Question","name":"Lohnt sich der Einsatz von Robotern für meinen Betrieb?","acceptedAnswer":{"@type":"Answer","text":"Robotereinsatz lohnt sich besonders bei wiederkehrenden, taktgebundenen oder belastenden Aufgaben sowie hohen Qualitätsanforderungen. Ob sich eine Automatisierung rechnet, klären wir seriös in der Analyse- und Beratungsphase."}},
+    {"@type":"Question","name":"Arbeiten Sie remote oder vor Ort – und auch überregional?","acceptedAnswer":{"@type":"Answer","text":"Beides. Offline-Programmierung, Support und Optimierung erfolgen effizient per Remote; für Inbetriebnahmen sind wir vor Ort. Standort ist Peine in Niedersachsen; wir sind im Großraum Hannover, Wolfsburg und Braunschweig sowie überregional erreichbar."}},
+    {"@type":"Question","name":"Welche Robotersysteme und Steuerungen programmieren Sie?","acceptedAnswer":{"@type":"Answer","text":"Hersteller-übergreifend KUKA (KRL, Sunrise.OS, WorkVisual), FANUC (TP, iPendant, Roboguide) und ABB. Auf Steuerungsseite Siemens-SPS (TIA Portal, S7) und weitere PLC-Systeme inkl. MES-Anbindung."}},
+    {"@type":"Question","name":"Schulen Sie auch unsere eigenen Mitarbeiter?","acceptedAnswer":{"@type":"Answer","text":"Ja. Auf Wunsch schulen wir Ihr Team direkt an Ihrer Anlage in Bedienung, Anpassung und Wartung, damit Sie den Betrieb sicher beherrschen und unabhängiger werden."}}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="brand" aria-label="ELMAS Robotic — Startseite">
+      <img src="assets/icon.png" alt="" class="brand-icon" width="182" height="182" aria-hidden="true">
+      <span class="brand-name">ELMAS ROBOTIC</span>
+    </a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <ul class="nav-list">
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#systeme">Systeme</a></li>
+        <li><a href="#branchen">Branchen</a></li>
+        <li><a href="#ablauf">Ablauf</a></li>
+        <li><a href="#ueber-uns">Über uns</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <a class="g-rating g-rating--head" href="https://www.google.com/search?q=Elmas+Robotic+Peine" target="_blank" rel="noopener" aria-label="5,0 von 5 Sternen bei Google – Bewertungen ansehen">
+      <svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34.1 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 13 24 13c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34.1 6.1 29.3 4 24 4c-7.7 0-14.3 4.4-17.7 10.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2c-2 1.5-4.5 2.4-7.2 2.4-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.5 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.5l6.2 5.2c-.4.4 6.6-4.8 6.6-14.7 0-1.3-.1-2.6-.4-3.9z"/></svg>
+      <span class="g-score">5,0</span>
+      <span class="g-stars" aria-hidden="true">★★★★★</span>
+    </a>
+    <a href="#kontakt" class="btn btn-primary header-cta">Rückruf anfordern</a>
+    <a href="tel:+4917630529414" class="mobile-call" aria-label="Jetzt anrufen: +49 176 30 52 94 14">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </a>
+    <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <!-- Mobile nav -->
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <ul>
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#systeme">Systeme</a></li>
+      <li><a href="#branchen">Branchen</a></li>
+      <li><a href="#ablauf">Ablauf</a></li>
+      <li><a href="#ueber-uns">Über uns</a></li>
+      <li><a href="#bewertungen">Bewertungen</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#kontakt" class="btn btn-primary">Rückruf anfordern</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO (Video-Hintergrund) ============ -->
+  <section class="hero" id="start">
+    <div class="hero-bg" aria-hidden="true">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
+        <source src="assets/hero-bg-1080.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow eyebrow-light">Spezialist für Roboterprogrammierung &amp; Industrieautomation</p>
+        <h1>Ihre Spezialisten für <span class="hl-w">Roboter&shy;programmierung</span></h1>
+        <p class="hero-sub">Optimieren Sie Ihre Fertigungsprozesse mit präziser Roboter- und SPS-Programmierung. KUKA, FANUC, ABB und Siemens-SPS – von der Analyse bis zur Inbetriebnahme aus einer Hand. Standort Peine, Niedersachsen.</p>
+        <div class="hero-cta">
+          <a href="#kontakt" class="btn btn-primary">Kostenlose Beratung anfragen</a>
+          <a href="#leistungen" class="btn btn-ghost">Leistungen ansehen</a>
+        </div>
+        <div class="hero-meta">
+          <a href="tel:+4917630529414" class="hero-phone"><span aria-hidden="true">▪</span> +49 176 30 52 94 14</a>
+          <a class="g-rating g-rating--hero" href="https://www.google.com/search?q=Elmas+Robotic+Peine" target="_blank" rel="noopener" aria-label="5,0 von 5 Sternen bei Google">
+            <svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34.1 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 13 24 13c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34.1 6.1 29.3 4 24 4c-7.7 0-14.3 4.4-17.7 10.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2c-2 1.5-4.5 2.4-7.2 2.4-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.5 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.5l6.2 5.2c-.4.4 6.6-4.8 6.6-14.7 0-1.3-.1-2.6-.4-3.9z"/></svg>
+            <span class="g-score">5,0</span><span class="g-stars" aria-hidden="true">★★★★★</span>
+          </a>
+        </div>
+        <div class="hero-trust">
+          <span>Systeme:</span>
+          <img src="assets/gray/brand-kuka-gray.png" alt="KUKA" height="18">
+          <img src="assets/gray/brand-fanuc-gray.png" alt="FANUC" height="18">
+          <img src="assets/gray/brand-siemens-gray.png" alt="Siemens" height="18">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST BAND ============ -->
+  <section class="trust">
+    <div class="container">
+      <p class="trust-caption">Erfahrung mit Anlagen und Anforderungen führender Industrie- und Automobilhersteller</p>
+      <div class="marquee" aria-label="Marken und Hersteller, mit deren Anlagen und Anforderungen wir Erfahrung haben">
+        <div class="marquee-track">
+          <span class="m-item"><img src="assets/ref-magna.png" alt="Magna"></span>
+          <span class="m-item"><img src="assets/ref-bmw.png" alt="BMW"></span>
+          <span class="m-item"><img src="assets/ref-vw.png" alt="Volkswagen"></span>
+          <span class="m-item"><img src="assets/ref-porsche.png" alt="Porsche"></span>
+          <span class="m-item"><img src="assets/ref-gestamp.png" alt="Gestamp"></span>
+          <span class="m-item"><img src="assets/ref-albertweber.png" alt="Albert Weber"></span>
+          <span class="m-item"><img src="assets/brand-siemens.png" alt="Siemens"></span>
+          <span class="m-item"><img src="assets/brand-plc.png" alt="PLC Systems Inc."></span>
+          <span class="m-item" aria-hidden="true"><img src="assets/ref-magna.png" alt=""></span>
+          <span class="m-item" aria-hidden="true"><img src="assets/ref-bmw.png" alt=""></span>
+          <span class="m-item" aria-hidden="true"><img src="assets/ref-vw.png" alt=""></span>
+          <span class="m-item" aria-hidden="true"><img src="assets/ref-porsche.png" alt=""></span>
+          <span class="m-item" aria-hidden="true"><img src="assets/ref-gestamp.png" alt=""></span>
+          <span class="m-item" aria-hidden="true"><img src="assets/ref-albertweber.png" alt=""></span>
+          <span class="m-item" aria-hidden="true"><img src="assets/brand-siemens.png" alt=""></span>
+          <span class="m-item" aria-hidden="true"><img src="assets/brand-plc.png" alt=""></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEISTUNGEN ============ -->
+  <section class="sec sec-light" id="leistungen">
+    <div class="container">
+      <header class="sec-head reveal">
+        <span class="rule" aria-hidden="true"></span>
+        <p class="eyebrow">Leistungen</p>
+        <h2>Von der Inbetriebnahme bis zur Schulung – alles aus einer Hand</h2>
+      </header>
+      <div class="services-grid">
+        <article class="svc-card reveal">
+          <div class="svc-media">
+            <span class="idx">01</span>
+            <img src="assets/svc-inbetriebnahme-1280.jpg" srcset="assets/svc-inbetriebnahme-700.jpg 700w, assets/svc-inbetriebnahme-1280.jpg 1280w" sizes="(max-width:760px) 100vw, 50vw" alt="Zwei Techniker in Schutzkleidung nehmen eine Roboteranlage in Betrieb" width="1280" height="854" loading="lazy">
+          </div>
+          <div class="svc-body">
+            <h3>Inbetriebnahme</h3>
+            <p>Wir bringen Ihre Anlagen reibungslos und schnell in den produktiven Betrieb – sauber eingerichtet, getestet und übergabebereit.</p>
+            <a href="#kontakt" class="svc-cta">Anfrage senden <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="svc-card reveal">
+          <div class="svc-media">
+            <span class="idx">02</span>
+            <img src="assets/svc-programmierung-1280.jpg" srcset="assets/svc-programmierung-700.jpg 700w, assets/svc-programmierung-1280.jpg 1280w" sizes="(max-width:760px) 100vw, 50vw" alt="Roboterprogrammierung an einer Schweißzelle mit Funkenflug" width="1280" height="854" loading="lazy">
+          </div>
+          <div class="svc-body">
+            <h3>Programmierung</h3>
+            <p>Präzise Roboterprogrammierung, die die Leistung Ihrer Anlage ausschöpft und Ihre Produktivität spürbar erhöht.</p>
+            <a href="#kontakt" class="svc-cta">Anfrage senden <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="svc-card reveal">
+          <div class="svc-media">
+            <span class="idx">03</span>
+            <img src="assets/svc-optimierung-1280.jpg" srcset="assets/svc-optimierung-700.jpg 700w, assets/svc-optimierung-1280.jpg 1280w" sizes="(max-width:760px) 100vw, 50vw" alt="Optimierung und Prüfung einer laufenden Roboteranlage" width="1280" height="854" loading="lazy">
+          </div>
+          <div class="svc-body">
+            <h3>Optimierung</h3>
+            <p>Fortlaufende Verbesserung bestehender Programme und Prozesse für kürzere Taktzeiten und maximale Effizienz.</p>
+            <a href="#kontakt" class="svc-cta">Anfrage senden <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="svc-card reveal">
+          <div class="svc-media">
+            <span class="idx">04</span>
+            <img src="assets/svc-schulung-1280.jpg" srcset="assets/svc-schulung-700.jpg 700w, assets/svc-schulung-1280.jpg 1280w" sizes="(max-width:760px) 100vw, 50vw" alt="Wissensvermittlung und Schulung von Mitarbeitern am Arbeitsplatz" width="1280" height="853" loading="lazy">
+          </div>
+          <div class="svc-body">
+            <h3>Schulung</h3>
+            <p>Wir geben Ihrem Team das Know-how für Bedienung und Wartung – für einen sicheren, eigenständigen Anlagenbetrieb.</p>
+            <a href="#kontakt" class="svc-cta">Anfrage senden <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ERGEBNISSE (KPIs) ============ -->
+  <section class="sec sec-dark stats-band" id="ergebnisse">
+    <div class="stats-bg" aria-hidden="true"></div>
+    <div class="container">
+      <header class="sec-head reveal">
+        <span class="rule" aria-hidden="true"></span>
+        <p class="eyebrow eyebrow-light">Ergebnisse</p>
+        <h2>Ergebnisse, die sich rechnen</h2>
+      </header>
+      <div class="stats-grid">
+        <div class="kpi reveal">
+          <span class="kpi-num"><span class="kpi-v" data-to="9999" data-fmt="thousand">0</span><span class="kpi-u">+</span></span>
+          <span class="kpi-label">Taktzeiteinsparung in Minuten</span>
+        </div>
+        <div class="kpi reveal">
+          <span class="kpi-num"><span class="kpi-v" data-to="-70">0</span><span class="kpi-u">&nbsp;%</span></span>
+          <span class="kpi-label">reduzierter Ausschuss</span>
+        </div>
+        <div class="kpi reveal">
+          <span class="kpi-num"><span class="kpi-v" data-to="10">0</span><span class="kpi-u">+</span></span>
+          <span class="kpi-label">zufriedene Kunden</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SYSTEME & FÄHIGKEITEN ============ -->
+  <section class="sec sec-dark grid-bg" id="systeme">
+    <div class="container">
+      <header class="sec-head reveal">
+        <span class="rule" aria-hidden="true"></span>
+        <p class="eyebrow eyebrow-light">Systeme &amp; Steuerungen</p>
+        <h2>Systeme, die wir beherrschen</h2>
+        <p class="sec-sub">Hersteller- und steuerungsübergreifend: Wir programmieren die führenden Roboter- und SPS-Systeme und verbinden sie zu einer durchgängigen Automatisierungslösung.</p>
+      </header>
+
+      <div class="systems-grid">
+        <article class="sys-card reveal">
+          <img class="sys-logo g" src="assets/gray/brand-kuka-gray.png" alt="KUKA"><img class="sys-logo c" src="assets/brand-kuka.png" alt="" aria-hidden="true">
+          <p>Programmierung und Inbetriebnahme von KUKA-Robotern – von der klassischen Bahnsteuerung bis zur sensitiven Cobot-Anwendung.</p>
+          <ul class="tags"><li>KRL</li><li>Sunrise.OS</li><li>WorkVisual</li></ul>
+        </article>
+        <article class="sys-card reveal">
+          <img class="sys-logo g" src="assets/gray/brand-fanuc-gray.png" alt="FANUC"><img class="sys-logo c" src="assets/brand-fanuc.png" alt="" aria-hidden="true">
+          <p>Tägliche Praxis am FANUC-Teach-Pendant: Programmierung, Optimierung und Offline-Simulation für stabile Serienprozesse.</p>
+          <ul class="tags"><li>TP</li><li>iPendant</li><li>Roboguide</li></ul>
+        </article>
+        <article class="sys-card reveal">
+          <img class="sys-logo g" src="assets/brand-abb.png" alt="ABB">
+          <p>Programmierung und Anpassung von ABB-Industrierobotern für Handhabung, Bearbeitung und automatisierte Fertigungsschritte.</p>
+          <ul class="tags"><li>RAPID</li><li>Industrieroboter</li><li>Retrofit</li></ul>
+        </article>
+        <article class="sys-card reveal">
+          <img class="sys-logo g" src="assets/gray/brand-siemens-gray.png" alt="Siemens"><img class="sys-logo c" src="assets/brand-siemens.png" alt="" aria-hidden="true">
+          <p>Steuerungstechnik als Bindeglied: Wir programmieren die SPS und verbinden Roboter, Peripherie und übergeordnete Systeme zu einer Einheit.</p>
+          <ul class="tags"><li>TIA Portal</li><li>S7</li><li>MES-Anbindung</li></ul>
+        </article>
+      </div>
+
+      <div class="caps-split">
+        <div class="caps-media reveal">
+          <img src="assets/photo-robot1-1100.jpg" alt="Industrielle SPS- und Steuerungstechnik im Schaltschrank" width="1100" height="620" loading="lazy">
+        </div>
+        <div class="caps-text reveal">
+          <h3>Was wir technisch leisten</h3>
+          <ul class="caps-list">
+            <li><strong>Online- &amp; Offline-Programmierung</strong><span>Programmierung direkt an der Anlage oder vorab offline am Modell – ohne die Produktion länger als nötig zu stoppen.</span></li>
+            <li><strong>Simulation &amp; virtuelle Inbetriebnahme</strong><span>Mit Roboguide, WorkVisual &amp; Co. testen wir Abläufe digital, bevor reale Hardware steht – das senkt Risiko und Stillstand.</span></li>
+            <li><strong>Retrofit &amp; Optimierung</strong><span>Wir modernisieren bestehende Anlagen, heben ungenutztes Potenzial und verlängern die wirtschaftliche Lebensdauer.</span></li>
+            <li><strong>Zykluszeitreduktion</strong><span>Durch gezielte Bahnplanung und Prozessanalyse holen wir messbar mehr Stückzahl aus derselben Anlage.</span></li>
+            <li><strong>Datenintegration in SPS &amp; MES</strong><span>Saubere Einbindung in Siemens-SPS und übergeordnete MES-Systeme – Grundlage für vernetzte Fertigung (Industrie 4.0).</span></li>
+            <li><strong>Remote-Support &amp; Predictive Maintenance</strong><span>Schnelle Hilfe per Fernzugriff und Datenauswertung, um Wartungsbedarf vor dem Ausfall zu erkennen.</span></li>
+            <li><strong>Schnelle Anpassung bei Produktwechseln</strong><span>Neue Varianten, Werkstücke und Greifer: Programme, die mit Ihrem Produktportfolio Schritt halten.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BRANCHEN ============ -->
+  <section class="sec sec-light" id="branchen">
+    <div class="container">
+      <header class="sec-head reveal">
+        <span class="rule" aria-hidden="true"></span>
+        <p class="eyebrow">Branchen</p>
+        <h2>Branchen, in denen wir zu Hause sind</h2>
+      </header>
+      <div class="cards-4">
+        <article class="card card-ind reveal">
+          <span class="card-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 17h18M5 17V9l4-2 4 2 4-2 2 1v9M9 17v-4h4v4"/></svg></span>
+          <h3>Automobil &amp; Zulieferer</h3>
+          <p>Schweißen, Kleben und Montieren in Taktstraßen – mit dem Anspruch und Qualitätsverständnis aus der Automobilfertigung.</p>
+        </article>
+        <article class="card card-ind reveal">
+          <span class="card-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20V8l6-4v4l6-4v16M4 20h16M9 20v-4h2v4"/></svg></span>
+          <h3>Maschinen- &amp; Anlagenbau</h3>
+          <p>Bearbeiten, Umrüsten und Palettieren: Roboterlösungen, die sich in bestehende Maschinen und Prozesse einfügen.</p>
+        </article>
+        <article class="card card-ind reveal">
+          <span class="card-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h13v10H3zM16 10h3l2 3v4h-5M6 20a2 2 0 100-4 2 2 0 000 4zM18 20a2 2 0 100-4 2 2 0 000 4z"/></svg></span>
+          <h3>Logistik &amp; Verpackung</h3>
+          <p>Pick-and-Place und Kommissionierung – für mehr Durchsatz und gleichbleibende Qualität bei wiederkehrenden Aufgaben.</p>
+        </article>
+        <article class="card card-ind reveal">
+          <span class="card-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4M6 6h12v12H6z"/></svg></span>
+          <h3>Elektronik &amp; Feinwerktechnik</h3>
+          <p>Löten, Bestücken und Prüfen mit hoher Wiederholgenauigkeit – auch bei kleinen Bauteilen und engen Toleranzen.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABLAUF ============ -->
+  <section class="sec sec-dark grid-bg" id="ablauf">
+    <div class="container">
+      <div class="ablauf-head">
+        <header class="sec-head reveal">
+          <span class="rule" aria-hidden="true"></span>
+          <p class="eyebrow eyebrow-light">Ablauf</p>
+          <h2>So arbeiten wir mit Ihnen zusammen</h2>
+          <p class="sec-sub">Klar, nachvollziehbar und ohne unrealistische Versprechen – von der ersten Analyse bis zum laufenden Support.</p>
+        </header>
+        <div class="ablauf-media reveal">
+          <img src="assets/photo-engineer-1400.jpg" alt="Beratung und Schulung an einem kollaborativen Roboter" width="1400" height="789" loading="lazy">
+        </div>
+      </div>
+      <ol class="steps">
+        <li class="step reveal"><span class="step-num">01</span><h3>Analyse &amp; Beratung</h3><p>Wir schauen uns Anlage, Ziele und Taktanforderungen genau an – vor Ort oder per Remote – und bewerten, was technisch und wirtschaftlich sinnvoll ist.</p></li>
+        <li class="step reveal"><span class="step-num">02</span><h3>Konzept &amp; Planung</h3><p>Sie erhalten ein klares Konzept: Lösungsweg, eingesetzte Systeme, Ablauf und Zeitrahmen – ohne unrealistische Versprechen.</p></li>
+        <li class="step reveal"><span class="step-num">03</span><h3>Umsetzung &amp; Inbetriebnahme</h3><p>Wir programmieren, integrieren und nehmen in Betrieb – wo möglich per Simulation abgesichert, um Stillstand gering zu halten.</p></li>
+        <li class="step reveal"><span class="step-num">04</span><h3>Support &amp; Optimierung</h3><p>Nach dem Go-live bleiben wir erreichbar: Feinjustierung, Anpassung bei Produktwechseln, Remote-Support und laufende Optimierung.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ ÜBER UNS ============ -->
+  <section class="sec sec-light" id="ueber-uns">
+    <div class="container about-grid">
+      <div class="about-media reveal">
+        <img src="assets/photo-real-1400.jpg" alt="Inhaber von ELMAS Robotic bei der Programmierung an einem FANUC-Teach-Pendant in einer Produktionszelle" width="1400" height="630" loading="lazy">
+      </div>
+      <div class="about-text reveal">
+        <span class="rule" aria-hidden="true"></span>
+        <p class="eyebrow">Über ELMAS Robotic</p>
+        <h2>Roboterprogrammierung aus erster Hand – vom Inhaber, der selbst an der Anlage steht</h2>
+        <p>ELMAS Robotic mit Sitz in Peine ist auf Roboterprogrammierung und Industrieautomation spezialisiert. Hinter dem Unternehmen steht ein Inhaber mit langjähriger Erfahrung in der Roboter- und SPS-Programmierung – geprägt durch seine Zeit beim Automobilzulieferer Magna. Hier wurde gelernt, was in der Serienfertigung wirklich zählt: kurze Taktzeiten, zuverlässige Prozesse und Anlagen, die im Schichtbetrieb laufen müssen.</p>
+        <p>Wir sind kein abstraktes Beratungshaus. Der Inhaber programmiert selbst – am Teach-Pendant, in der realen Produktionszelle, an FANUC- und KUKA-Anlagen mit echten Karosserien und Werkstücken. Sie sprechen direkt mit der Person, die Ihre Anlage versteht, programmiert und in Betrieb nimmt – nicht mit einer Zwischenebene.</p>
+        <ul class="stats">
+          <li><span class="stat-num">Magna</span><span class="stat-lbl">Hintergrund beim Automobilzulieferer</span></li>
+          <li><span class="stat-num">KUKA · FANUC · ABB</span><span class="stat-lbl">Roboter-Systeme im Einsatz</span></li>
+          <li><span class="stat-num">SPS &amp; MES</span><span class="stat-lbl">Steuerungs- &amp; Datenintegration</span></li>
+          <li><span class="stat-num">Peine</span><span class="stat-lbl">Standort in Niedersachsen</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BEWERTUNGEN ============ -->
+  <section class="sec sec-dark grid-bg" id="bewertungen">
+    <div class="container">
+      <header class="sec-head reveal">
+        <span class="rule" aria-hidden="true"></span>
+        <p class="eyebrow eyebrow-light">Bewertungen</p>
+        <h2>Was unsere Kunden sagen</h2>
+        <a class="g-rating g-rating--lg" href="https://www.google.com/search?q=Elmas+Robotic+Peine" target="_blank" rel="noopener" aria-label="5,0 von 5 Sternen aus 4 Google-Bewertungen">
+          <svg class="g-logo" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34.1 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 19 13 24 13c3.1 0 5.8 1.2 7.9 3l5.7-5.7C34.1 6.1 29.3 4 24 4c-7.7 0-14.3 4.4-17.7 10.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2c-2 1.5-4.5 2.4-7.2 2.4-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.5 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4.1 5.5l6.2 5.2c-.4.4 6.6-4.8 6.6-14.7 0-1.3-.1-2.6-.4-3.9z"/></svg>
+          <span class="g-score">5,0</span><span class="g-stars" aria-hidden="true">★★★★★</span>
+          <span class="g-count">aus 4 Google-Bewertungen</span>
+        </a>
+      </header>
+
+      <div class="reviews-grid">
+        <article class="review reveal">
+          <div class="review-top">
+            <div class="review-who">
+              <span class="avatar avatar-red">ME</span>
+              <span><span class="review-name">Mustafa Er</span><span class="review-meta">vor 1 Monat · Google</span></span>
+            </div>
+            <span class="review-stars" aria-hidden="true">★★★★★</span>
+          </div>
+          <p class="review-body">Sehr guter Roboter-Programmierer! Freundlich, zuverlässig und findet für jedes Problem eine passende Lösung. Arbeitet schnell und professionell – absolut empfehlenswert.</p>
+        </article>
+
+        <article class="review reveal">
+          <div class="review-top">
+            <div class="review-who">
+              <span class="avatar avatar-ink">D</span>
+              <span><span class="review-name">Denni</span><span class="review-meta">vor 5 Monaten · Google</span></span>
+            </div>
+            <span class="review-stars" aria-hidden="true">★★★★★</span>
+          </div>
+          <p class="review-body">Sehr guter Service und Beratung. Elmas Robotic glänzt durch Zuverlässigkeit und Flexibilität.</p>
+        </article>
+
+        <article class="review reveal">
+          <div class="review-top">
+            <div class="review-who">
+              <span class="avatar avatar-deep">PK</span>
+              <span><span class="review-name">Pervin Kurt</span><span class="review-meta">vor 2 Jahren · Google</span></span>
+            </div>
+            <span class="review-stars" aria-hidden="true">★★★★★</span>
+          </div>
+          <p class="review-body">Sehr gute kompetente Beratung.</p>
+        </article>
+      </div>
+
+      <div class="reviews-cta">
+        <a class="btn btn-ghost" href="https://www.google.com/search?q=Elmas+Robotic+Peine" target="_blank" rel="noopener">Alle Bewertungen auf Google ansehen →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="sec sec-light sec-faq" id="faq">
+    <div class="container">
+      <header class="sec-head reveal">
+        <span class="rule" aria-hidden="true"></span>
+        <p class="eyebrow">FAQ</p>
+        <h2>Häufige Fragen</h2>
+      </header>
+      <div class="faq-list reveal">
+        <details class="faq-item"><summary>Was kostet die Programmierung eines Roboters oder einer SPS?</summary><div class="faq-body"><p>Eine pauschale Zahl wäre unseriös, weil die Kosten stark von Aufgabe, System und Aufwand abhängen: Anzahl der Roboter, Komplexität der Bewegungen, Schnittstellen zur SPS und ob vor Ort oder per Offline-Programmierung gearbeitet wird. Nach einem kurzen Gespräch und einer Analyse Ihrer Anlage erhalten Sie ein klares, nachvollziehbares Angebot ohne versteckte Posten.</p></div></details>
+        <details class="faq-item"><summary>Wie lange dauert die Inbetriebnahme einer Anlage?</summary><div class="faq-body"><p>Das hängt vom Umfang ab. Eine einzelne, klar umrissene Roboterzelle ist oft in wenigen Tagen einsatzbereit, während komplexe, vernetzte Anlagen mehr Zeit benötigen. Wo sinnvoll, sichern wir die Inbetriebnahme vorab durch Simulation und virtuelle Inbetriebnahme ab – das verkürzt die Zeit an der realen Anlage und reduziert Produktionsstillstand.</p></div></details>
+        <details class="faq-item"><summary>Können bestehende Anlagen nachgerüstet oder optimiert werden?</summary><div class="faq-body"><p>Ja, das ist ein Schwerpunkt von uns. Wir modernisieren vorhandene Roboter und Steuerungen (Retrofit), reduzieren Zykluszeiten und binden Anlagen in SPS- und MES-Systeme ein. So nutzen Sie Ihre bestehende Technik weiter und steigern gleichzeitig Produktivität und Verfügbarkeit – ohne zwingend komplett neu investieren zu müssen.</p></div></details>
+        <details class="faq-item"><summary>Woran erkenne ich einen erfahrenen Roboterprogrammierer?</summary><div class="faq-body"><p>An nachweisbarer Praxis an realen Anlagen, an Hersteller-übergreifendem Know-how (KUKA, FANUC, ABB) und an der Fähigkeit, Roboter und SPS sauber zusammenzubringen. Bei ELMAS Robotic programmiert der Inhaber selbst und bringt seine Erfahrung aus dem Automobilumfeld direkt ein – Sie sprechen mit der Person, die Ihre Anlage tatsächlich umsetzt, nicht nur verkauft.</p></div></details>
+        <details class="faq-item"><summary>Lohnt sich der Einsatz von Robotern für meinen Betrieb?</summary><div class="faq-body"><p>Robotereinsatz lohnt sich besonders bei wiederkehrenden, taktgebundenen oder belastenden Aufgaben sowie bei gleichbleibend hohen Qualitätsanforderungen. Ob sich eine Automatisierung rechnet, lässt sich anhand von Stückzahlen, Prozess und Zielen seriös abschätzen. Genau das klären wir in der Analyse- und Beratungsphase – ehrlich und ohne etwas zu empfehlen, das sich für Sie nicht trägt.</p></div></details>
+        <details class="faq-item"><summary>Arbeiten Sie remote oder vor Ort – und auch überregional?</summary><div class="faq-body"><p>Beides. Viele Aufgaben – Offline-Programmierung, Support, Fehleranalyse und Optimierung – lassen sich effizient per Remote-Zugriff erledigen. Für Inbetriebnahmen und Arbeiten direkt an der Anlage sind wir vor Ort. Unser Standort ist Peine in Niedersachsen; wir sind im Großraum Hannover, Wolfsburg und Braunschweig sowie überregional erreichbar.</p></div></details>
+        <details class="faq-item"><summary>Welche Robotersysteme und Steuerungen programmieren Sie?</summary><div class="faq-body"><p>Wir arbeiten Hersteller-übergreifend mit KUKA (KRL, Sunrise.OS, WorkVisual), FANUC (TP, iPendant, Roboguide) und ABB. Auf Steuerungsseite programmieren wir Siemens-SPS (TIA Portal, S7) und weitere PLC-Systeme und binden Roboter in übergeordnete MES-Systeme ein.</p></div></details>
+        <details class="faq-item"><summary>Schulen Sie auch unsere eigenen Mitarbeiter?</summary><div class="faq-body"><p>Ja. Auf Wunsch schulen wir Ihr Team direkt an Ihrer Anlage in Bedienung, Anpassung und Wartung. Ziel ist, dass Ihre Mitarbeiter den täglichen Betrieb sicher beherrschen und kleinere Anpassungen selbst vornehmen können – das macht Sie unabhängiger und reduziert Ausfallzeiten.</p></div></details>
+      </div>
+
+      <div class="faq-cta reveal">
+        <div class="faq-cta-text">
+          <h3>Ihre Frage war nicht dabei?</h3>
+          <p class="faq-cta-sub">Sprechen Sie direkt mit dem Spezialisten – persönlich, schnell und unverbindlich.</p>
+        </div>
+        <div class="faq-cta-actions">
+          <a href="#kontakt" class="btn btn-primary">Jetzt Kontakt aufnehmen</a>
+          <a href="tel:+4917630529414" class="faq-cta-tel"><span aria-hidden="true">▪</span> +49 176 30 52 94 14</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KONTAKT ============ -->
+  <section class="sec sec-dark grid-bg" id="kontakt">
+    <div class="container contact-grid">
+      <div class="contact-text reveal">
+        <span class="rule" aria-hidden="true"></span>
+        <p class="eyebrow eyebrow-light">Kontakt</p>
+        <h2>Lassen Sie uns über Ihre Anlage sprechen</h2>
+        <p class="sec-sub">Ob Inbetriebnahme, Optimierung, Retrofit oder Schulung: Schildern Sie uns kurz Ihr Vorhaben. Sie erhalten eine ehrliche Einschätzung und ein klares Angebot – direkt vom Spezialisten, der Ihre Anlage umsetzt.</p>
+        <ul class="nap">
+          <li><span class="nap-ic" aria-hidden="true">▪</span> ELMAS Robotic · Adlerstraße 7, 31228 Peine</li>
+          <li><span class="nap-ic" aria-hidden="true">▪</span> <a href="tel:+4917630529414">+49 176 30 52 94 14</a></li>
+          <li><span class="nap-ic" aria-hidden="true">▪</span> <a href="mailto:info@elmas-robotic.com">info@elmas-robotic.com</a></li>
+          <li><span class="nap-ic" aria-hidden="true">▪</span> Mo–Fr 8:00–18:00 Uhr</li>
+        </ul>
+      </div>
+
+      <form class="contact-form reveal" id="contact-form" novalidate>
+        <!-- Spamschutz: Honeypot (für Menschen unsichtbar) -->
+        <div class="hp-field" aria-hidden="true">
+          <label for="website">Website (bitte leer lassen)</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <!-- Spamschutz: Zeitfalle -->
+        <input type="hidden" id="form-ts" name="ts" value="">
+
+        <div class="field">
+          <label for="name">Name <span class="req">*</span></label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="company">Unternehmen</label>
+          <input type="text" id="company" name="company" autocomplete="organization">
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="phone">Telefon <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">Ihr Vorhaben</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <div class="field-check">
+          <input type="checkbox" id="privacy" name="privacy" required>
+          <label for="privacy">Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin mit der Verarbeitung meiner Daten zur Bearbeitung der Anfrage einverstanden. <span class="req">*</span></label>
+        </div>
+
+        <!-- Spamschutz: Cloudflare Turnstile (Produktion) — Sitekey eintragen + Token serverseitig prüfen
+        <div class="cf-turnstile" data-sitekey="DEIN_TURNSTILE_SITEKEY"></div>
+        <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+        -->
+
+        <button type="submit" class="btn btn-primary btn-submit">Jetzt Rückruf oder Angebot anfragen</button>
+        <p class="form-note">Dieses Formular ist gegen Spam geschützt. Für die Produktion wird zusätzlich Cloudflare Turnstile aktiviert.</p>
+        <p class="form-success" id="form-success" hidden>Ihr E-Mail-Programm wurde mit Ihrer Anfrage geöffnet. Bitte senden Sie die E-Mail noch ab – wir melden uns dann zeitnah bei Ihnen.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <span class="footer-topline" aria-hidden="true"></span>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#top" class="brand" aria-label="ELMAS Robotic — Startseite">
+        <img src="assets/icon.png" alt="" class="brand-icon" width="182" height="182" aria-hidden="true">
+        <span class="brand-name">ELMAS ROBOTIC</span>
+      </a>
+      <p>Spezialist für Roboterprogrammierung, SPS-Programmierung und Industrieautomation. KUKA, FANUC, ABB &amp; Siemens-SPS – aus Peine, Niedersachsen.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer-Navigation">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#leistungen">Leistungen</a></li>
+        <li><a href="#systeme">Systeme</a></li>
+        <li><a href="#branchen">Branchen</a></li>
+        <li><a href="#ablauf">Ablauf</a></li>
+        <li><a href="#ueber-uns">Über uns</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="footer-contact">
+      <h4>Kontakt</h4>
+      <ul>
+        <li>Adlerstraße 7, 31228 Peine</li>
+        <li><a href="tel:+4917630529414">+49 176 30 52 94 14</a></li>
+        <li><a href="mailto:info@elmas-robotic.com">info@elmas-robotic.com</a></li>
+        <li>Mo–Fr 8:00–18:00 Uhr</li>
+      </ul>
+      <ul class="footer-legal">
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© 2026 ELMAS Robotic. Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
